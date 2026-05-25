@@ -6,6 +6,6 @@ license = {text = "Apache-2.0"}
 dependencies = ["Pillow", "gdown"]
 
 [tool.comfy]
-PublisherId = "chrismyau"
+PublisherId = "cmyau"
 DisplayName = "ComfyUI PIH - Image Harmonization"
 Icon = ""
