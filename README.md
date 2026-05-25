@@ -32,6 +32,16 @@ PIH blends a composited foreground into a background by learning complex local a
 
 ---
 
+## Examples
+
+Same dog cutout, two very different backgrounds — PIH adapts the lighting, color, and tone to each scene:
+
+| Tropical beach | Dusk alley |
+|----------------|------------|
+| ![beach](examples/dog_beach.png) | ![alley](examples/dog_alley_night.png) |
+
+---
+
 ## Nodes
 
 | Node | Description |
