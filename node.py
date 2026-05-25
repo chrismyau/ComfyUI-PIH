@@ -20,6 +20,8 @@ class PIH_Harmonize:
                 "Foreground Image": ("IMAGE",),      # [B,H,W,C], RGB or RGBA
                 "Strength": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.01}), # Strength of harmonization
                 "PIH Processor": ("PIH_PROCESSOR",), # Model_Composite_PL instance
+            },
+            "optional": {
                 "mask": ("MASK",),                   # [B,H,W] float [0,1] (optional, multiplies FG alpha)
             }
         }
@@ -52,6 +54,10 @@ class PIH_Harmonize:
         # Resize BG to FG spatial size if needed
         if (Hb, Wb) != (Hf, Wf):
             bg = F.interpolate(bg.permute(0,3,1,2), size=(Hf,Wf), mode="bilinear", align_corners=False).permute(0,2,3,1)
+
+        # Resize mask to FG spatial size if needed (ComfyUI MASK is [B,H,W])
+        if mask_in is not None and mask_in.shape[-2:] != (Hf, Wf):
+            mask_in = F.interpolate(mask_in.unsqueeze(1), size=(Hf, Wf), mode="bilinear", align_corners=False).squeeze(1)
 
         # Split FG into RGB (+ alpha if present)
         if Cf == 4:

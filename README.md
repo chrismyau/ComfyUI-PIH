@@ -70,6 +70,12 @@ To download manually: [Google Drive link](https://drive.google.com/file/d/1seW8q
 3. Optionally connect a `mask` to control which region is harmonized
 4. Adjust `Strength` (0–1) to blend between the original composite and the harmonized result
 
+### ⚠️ Mask polarity
+
+This node uses the compositing convention: **mask = 1 where the foreground subject is**, 0 elsewhere.
+
+ComfyUI's built-in `LoadImage` node outputs an *inverted* mask (`1 - alpha`) because it's designed for inpainting workflows. If you're feeding the MASK output of `LoadImage` from a PNG with a transparent background, **insert an `InvertMask` node** between `LoadImage` and `PIH Harmonize`, or you'll harmonize the background instead of the subject.
+
 ---
 
 ## License
