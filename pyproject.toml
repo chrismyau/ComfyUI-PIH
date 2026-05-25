@@ -5,6 +5,9 @@ description = "ComfyUI custom node for Semi-supervised Parametric Real-world Ima
 license = {text = "Apache-2.0"}
 dependencies = ["Pillow", "gdown"]
 
+[project.urls]
+Repository = "https://github.com/chrismyau/ComfyUI-PIH"
+
 [tool.comfy]
 PublisherId = "cmyau"
 DisplayName = "ComfyUI PIH - Image Harmonization"
