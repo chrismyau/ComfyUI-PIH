@@ -1,0 +1,11 @@
+[project]
+name = "comfyui-pih"
+version = "1.0.0"
+description = "ComfyUI custom node for Semi-supervised Parametric Real-world Image Harmonization (PIH, CVPR 2023)"
+license = {text = "Apache-2.0"}
+dependencies = ["Pillow", "gdown"]
+
+[tool.comfy]
+PublisherId = "chrismyau"
+DisplayName = "ComfyUI PIH - Image Harmonization"
+Icon = ""

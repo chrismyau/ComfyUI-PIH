@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pth
+*.pt
+pretrained/*.pth
+pretrained/*.pt
+results/*
+!results/results.placeholder
+!pretrained/pretrained.placeholder
+.DS_Store
+*.egg-info/
+dist/
