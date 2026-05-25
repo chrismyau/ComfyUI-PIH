@@ -1,11 +1,34 @@
 # ComfyUI-PIH
 
-ComfyUI custom nodes for **Semi-supervised Parametric Real-world Image Harmonization** (PIH), a CVPR 2023 paper from Adobe Research.
+ComfyUI custom nodes for **Semi-supervised Parametric Real-world Image Harmonization** (PIH).
+
+---
+
+## Credits
+
+This node wraps the original PIH research code by:
+
+**Ke Wang, Michaël Gharbi, He Zhang, Zhihao Xia, Eli Shechtman**  
+Adobe Research — CVPR 2023
+
+[Project Page](http://people.eecs.berkeley.edu/~kewang/sprih/) | [Paper](https://arxiv.org/abs/2303.00157) | [Original Repo](https://github.com/adobe/PIH)
+
+Please contact Ke (kewang@berkeley.edu) or Michaël (mgharbi@adobe.com) with questions about the underlying model.
+
+If you use this in your research, please cite the original paper:
+
+```bibtex
+@article{wang2023semi,
+  title={Semi-supervised Parametric Real-world Image Harmonization},
+  author={Wang, Ke and Gharbi, Micha{\"e}l and Zhang, He and Xia, Zhihao and Shechtman, Eli},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2023}
+}
+```
+
+---
 
 PIH blends a composited foreground into a background by learning complex local appearance harmonization — matching color, tone, and shading — from unpaired real composites.
-
-> Original research: [Project Page](http://people.eecs.berkeley.edu/~kewang/sprih/) | [Paper](https://arxiv.org/abs/2303.00157)  
-> Authors: Ke Wang, Michaël Gharbi, He Zhang, Zhihao Xia, Eli Shechtman (Adobe Research)
 
 ---
 
